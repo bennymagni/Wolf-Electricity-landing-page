@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electricity Company</title>
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+    <header>
+        <a href="# " class="logo"></a>
+        <nav>
+            <ul>
+                <li><a href="# ">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <section class="ImageWindow">
+            <div class="inner">
+                <div class="CaptionAnimation">
+                    <h1>Wolf Electricity</h1> 
+                </div>
+                <div class="anim-panel">
+                    <p class="one">Your one stop online shop for all electrical needs</p>
+                    <a href="#" class="read-btn primary">Purchase Prepaid</a>
+                </div>
+            </div>
+        </section>
+        <section class="sidebar">
+            <div class="inner">
+                <div class="CaptionAnimation">
+                    <h2><a href = "#">Locations</a></h2> 
+                </div>
+                <div class="anim-panel">
+                    <p>Wanna pay us a visit, click locations to see every single one of our offices and find a branch near you</p>
+                </div>
+            </div>
+        </section>
+        <section class="subscribe">
+             <div class="inner inner2">
+                <div class="CaptionAnimation">
+                    <h2>Subscribe</h2>
+                </div>
+                <div class="anim-panel">
+                    <p>Pls click Subscribe to subscribe to our mailing list</p>
+                    <input type="text" name="email" placeholder="Email Address" />
+                    <button class="cta">Subscribe</button>
+                </div>
+             </div>
+        </section>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    
+    
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function(event){
+
+            window.addEventListener("load", function(e){
+
+                document.body.style.display = "block";
+
+                var t1 = new TimelineMax()
+
+                t1.staggerFrom('section', 2, {
+                    opacity: 0,
+                    scale: .5,
+                    ease: Power2.easeOut
+                }, 0.2)
+
+                t1.staggerFrom('h1, h2', .5,{
+                    opacity: 0,
+                    y:-40,
+                    ease: Power2.easeInOut
+                }, 0.2, "-=2")
+
+                t1.staggerFrom('.anim-panel', 1,{
+                    opacity: 0,
+                    y:-40,
+                    ease: Power2.easeInOut
+                }, 0.2, "-=1.5")
+            }, false);
+        });
+
+    </script>
+
+
+</body>
+</html>

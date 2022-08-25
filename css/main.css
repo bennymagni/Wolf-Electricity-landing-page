@@ -1,0 +1,187 @@
+@font-face {
+    font-family: 'Monserrat';
+    src: url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&display=swap");
+}
+body, html{
+    margin: 0;
+}
+
+body{
+    height: 100%; 
+    font-family: 'Montserrat', sans-serif; 
+    display: none;
+}
+
+header{
+    position: absolute;
+    padding: 1em;
+    z-index: 20;
+    display: flex;
+    justify-content: space-between ;
+    width: calc(100% - 2em);
+    background: black;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a.logo{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+li a{
+    padding: 1em;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: auto;
+}
+
+section{
+    padding: 3em;
+}
+
+h1, h2, .read-btn{
+    text-transform: uppercase;
+    margin: 0;
+}
+
+h2{
+    font-size: 1.4rem;
+}
+.read-btn{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background: url('../Images/arrow.svg') no-repeat;
+    background-size: 8px;
+    background-position: 0 1px;
+    padding-left: 1em;
+}
+
+.primary{
+    padding: 1.5em 1.5em 1.5em calc(3em + 25px);
+    background-position: 3em;
+    border:  1px solid grey;
+    display: inline-block;
+    margin-top: 3em;
+    margin-left: -3em;
+}
+
+.CaptionAnimation{
+    overflow: hidden;
+}
+
+section.ImageWindow{
+    padding-top: 8em;
+    background: url("../Images/Electricity-Bulb-Idea-Energy-Bright-Light-Current-3583835.jpg");
+    background-size: cover;
+}
+
+p.one{
+    width: 70%;
+    font-size: 0.7rem;
+    margin-bottom: 0;
+} 
+
+h1{
+    font-size: 2rem;
+    align-items: flex-start;
+}
+.inner{
+    color: white;
+}
+.inner2{
+    color: #0593D1;
+}
+
+section.sidebar, section.subscribe{
+    font-size: 0.7rem;
+    line-height: 1.6em;
+}
+
+section.sidebar{
+    background:#69B9DC;
+}
+
+input{
+    width: calc(100% - 2em);
+    padding: 1em;
+    font-family: 'Montserrat';
+    margin-bottom: 1em;
+    color: #0593D1;
+}
+::placeholder{
+    color: #0593D1;
+    font-size: 0.6rem;
+}
+
+button{
+    width: 100%;
+    background: #0593D1;
+    color: white;
+    padding: 1em;
+    border: none;
+    font-family: 'Montserrat';
+}
+
+@media only screen and (min-width: 768px){
+    html{
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width: 1020px){
+   header{
+    background: none;
+   }
+
+   .wrapper{
+        grid-template-columns: 70% auto;
+        grid-template-rows: 60% auto;
+        grid-template-areas: 
+            "ImageWindow location"
+            "ImageWindow subscribe";
+        height: 100vh;
+   }
+
+   section.ImageWindow{
+    grid-area: ImageWindow;
+   }
+
+   section{
+    display: grid;
+    grid-template-rows: auto;
+    align-items: center;
+   }
+   h1{
+    position: fixed;
+    top: 75px;
+    left: 60px;
+   }
+
+   p.one{
+    position: fixed;
+    top: -180px;
+    left: 10px;
+   }
+
+}
+
+@media only screen and (min-width: 1880px){
+    html{
+        font-size: 21px;
+    }
+}
